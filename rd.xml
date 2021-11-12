@@ -1,0 +1,160 @@
+﻿<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+	<Application>
+		<Assembly Name="Microsoft.ML.Data">
+			<Type Name="Microsoft.ML.Data.ColumnBindingsBase">
+				<Method Name="GetAnnotationGetterDelegate">
+					<GenericArgument Name="Microsoft.ML.Data.VBuffer`1[[System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib]], Microsoft.ML.DataView" />
+				</Method>
+				<Method Name="GetAnnotationGetterDelegate">
+					<GenericArgument Name="Microsoft.ML.Data.VBuffer`1[[System.Int32, System.Private.CoreLib]], Microsoft.ML.DataView" />
+				</Method>
+				<Method Name="GetAnnotationGetterDelegate">
+					<GenericArgument Name="System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib" />
+				</Method>
+				<Method Name="GetAnnotationGetterDelegate">
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+				<Method Name="GetAnnotationGetterDelegate">
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Data.ColumnConcatenatingTransformer+Mapper+BoundColumn">
+				<Method Name="MakeGetter">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Data.IO.BinarySaver">
+				<Method Name="LoadValue">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Data.IO.BinaryLoader+MetadataTableOfContentsEntry+ImplVec`1[[System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib]]" Dynamic="Required All" />
+			<Type Name="Microsoft.ML.Data.IO.BinaryLoader+MetadataTableOfContentsEntry+ImplVec`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+			<Type Name="Microsoft.ML.Data.IO.BinaryLoader+MetadataTableOfContentsEntry+ImplOne`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+			<Type Name="Microsoft.ML.Data.IO.CodecFactory+VBufferCodec`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+			<Type Name="Microsoft.ML.Data.IO.CodecFactory+VBufferCodec`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+			<Type Name="Microsoft.ML.Data.IO.CodecFactory+VBufferCodec`1[[System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib]]" Dynamic="Required All" />
+			<Type Name="Microsoft.ML.Data.RowCursorUtils">
+				<Method Name="GetGetterAsCore">
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+				<Method Name="GetVecGetterAsCore">
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+				<Method Name="GetVecGetterAsCore">
+					<GenericArgument Name="System.UInt16, System.Private.CoreLib" />
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Data.RowToRowScorerBase">
+				<Method Name="GetGetterFromRow">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Transforms.ValueToKeyMappingTransformer+BoundTermMap">
+				<Method Name="CreateCore">
+					<GenericArgument Name="System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Transforms.ValueToKeyMappingTransformer+Mapper">
+				<Method Name="MakeGetter">
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+			</Type>
+
+			<!-- these are special cased for the application since the ModelInput type is in the user's app -->
+			<Type Name="Microsoft.ML.ApiUtils">
+				<Method Name="GeneratePeek">
+					<GenericArgument Name="Microsoft.ML.Data.DataViewConstructionUtils+InputRow`1[[NativeMLAOT.ModelInput, NativeMLAOT]], Microsoft.ML.Data" />
+					<GenericArgument Name="NativeMLAOT.ModelInput, NativeMLAOT" />
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+				<Method Name="GeneratePeek">
+					<GenericArgument Name="Microsoft.ML.Data.DataViewConstructionUtils+InputRow`1[[NativeMLAOT.ModelInput, NativeMLAOT]], Microsoft.ML.Data" />
+					<GenericArgument Name="NativeMLAOT.ModelInput, NativeMLAOT" />
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+				<Method Name="GeneratePoke">
+					<GenericArgument Name="Microsoft.ML.Data.TypedCursorable`1[[NativeMLAOT.ModelOutput, NativeMLAOT]], Microsoft.ML.Data" />
+					<GenericArgument Name="NativeMLAOT.ModelOutput, NativeMLAOT" />
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+				<Method Name="GeneratePoke">
+					<GenericArgument Name="Microsoft.ML.Data.TypedCursorable`1[[NativeMLAOT.ModelOutput, NativeMLAOT]], Microsoft.ML.Data" />
+					<GenericArgument Name="NativeMLAOT.ModelOutput, NativeMLAOT" />
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Data.DataViewConstructionUtils+InputRowBase`1[[NativeMLAOT.ModelInput, NativeMLAOT]], Microsoft.ML.Data">
+				<Method Name="CreateDirectGetterDelegate">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+				<Method Name="CreateDirectGetterDelegate">
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Data.TypedCursorable`1+TypedRowBase[[NativeMLAOT.ModelOutput, NativeMLAOT]]">
+				<Method Name="CreateDirectSetter">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+				<Method Name="CreateDirectSetter">
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+			</Type>
+
+		</Assembly>
+		<Assembly Name="Microsoft.ML.DataView">
+			<Type Name="Microsoft.ML.DataViewSchema+Annotations">
+				<Method Name="CheckGetter">
+					<GenericArgument Name="Microsoft.ML.Data.VBuffer`1[[System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib]], Microsoft.ML.DataView" />
+				</Method>
+				<Method Name="CheckGetter">
+					<GenericArgument Name="Microsoft.ML.Data.VBuffer`1[[System.Int32, System.Private.CoreLib]], Microsoft.ML.DataView" />
+				</Method>
+				<Method Name="CheckGetter">
+					<GenericArgument Name="System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib" />
+				</Method>
+				<Method Name="CheckGetter">
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+				<Method Name="CheckGetter">
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.DataViewSchema+Annotations+Builder">
+				<Method Name="AddDelegate">
+					<GenericArgument Name="Microsoft.ML.Data.VBuffer`1[[System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib]], Microsoft.ML.DataView" />
+				</Method>
+				<Method Name="AddDelegate">
+					<GenericArgument Name="Microsoft.ML.Data.VBuffer`1[[System.Int32, System.Private.CoreLib]], Microsoft.ML.DataView" />
+				</Method>
+				<Method Name="AddDelegate">
+					<GenericArgument Name="System.ReadOnlyMemory`1[[System.Char, System.Private.CoreLib]], System.Private.CoreLib" />
+				</Method>
+				<Method Name="AddDelegate">
+					<GenericArgument Name="System.Boolean, System.Private.CoreLib" />
+				</Method>
+				<Method Name="AddDelegate">
+					<GenericArgument Name="System.UInt32, System.Private.CoreLib" />
+				</Method>
+			</Type>
+		</Assembly>
+		<Assembly Name="Microsoft.ML.Transforms">
+			<Type Name="Microsoft.ML.Transforms.MissingValueReplacingTransformer">
+				<Method Name="GetIsNADelegate">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+				<Method Name="TestType">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+			</Type>
+			<Type Name="Microsoft.ML.Transforms.MissingValueReplacingTransformer+Mapper">
+				<Method Name="ComposeGetterOne">
+					<GenericArgument Name="System.Single, System.Private.CoreLib" />
+				</Method>
+			</Type>
+		</Assembly>
+	</Application>
+</Directives>
