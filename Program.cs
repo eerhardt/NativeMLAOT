@@ -1,10 +1,7 @@
 ﻿using Microsoft.ML;
+using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Transforms;
 using NativeMLAOT;
-
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
 
 //Load sample data
 var sampleData = new ModelInput()
@@ -28,13 +25,14 @@ var sampleData = new ModelInput()
 //Load model and predict output
 var mlContext = new MLContext();
 mlContext.ComponentCatalog.RegisterAssembly(typeof(OneHotEncodingTransformer).Assembly);
-mlContext.ComponentCatalog.RegisterAssembly(typeof(Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer).Assembly);
+mlContext.ComponentCatalog.RegisterAssembly(typeof(FastTreeBinaryTrainer).Assembly);
 
-string MLNetModelPath = Path.GetFullPath("MLModel1.zip");
-ITransformer mlModel = mlContext.Model.Load(MLNetModelPath, out var _);
-var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
+string modelPath = Path.GetFullPath("MLModel1.zip");
+ITransformer mlModel = mlContext.Model.Load(modelPath, out var _);
 
-var result = predictionEngine.Predict(sampleData);
+PredictionEngine<ModelInput, ModelOutput> predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
+
+ModelOutput result = predictionEngine.Predict(sampleData);
 
 Console.WriteLine($"Predicted Label_IsOver50K_: {result.Prediction}");
 Console.WriteLine($"Probability: {result.Probability}");
